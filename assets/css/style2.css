@@ -1,0 +1,97 @@
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Source Sans Pro";
+    background-image: url(http://sf.co.ua/12/12/wallpaper-1000240.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    color: ghostwhite;
+    
+}
+
+h1 {
+	font-family: 'Press Start 2P';
+}
+
+#first {
+	margin-left: 150px;
+}
+
+
+
+#display {
+	margin-left: 900px;
+}
+
+.second {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+	font-size: 20px;
+	padding: 30px;
+	margin: 0 0 40px 0;
+	width: 100%;
+	max-width: 650px;
+	border: 1px solid #dddddd;
+	
+}
+
+#randomnumber {
+	background-color: #3399ff;
+	height: 200px;
+	width: 200px;
+	float: left;
+	font-size: 30px;
+	position: relative;
+	padding-right: 10px;
+	text-align: center;
+	padding-top: 75px;
+	margin-bottom: 50px;
+	margin-right: 76px;
+	
+}
+
+#wins #losses  {
+	background-color: #0059b3;
+	height: 100px;
+	width: 100px;
+	margin-left: 220px;
+	position: relative;
+	color: #e6e6e6;
+
+}
+
+img:nth-child(even) {
+	margin-right: 40px;
+	float: left;
+	margin-top: 100px;
+}
+
+img:nth-child(odd) {
+	margin-right: 40px;
+	margin-top: 100px;
+}
+
+p {
+
+	position: relative;
+	margin-top: 100px;
+}
+
+#usernumber {
+	background-color: #339966;
+	height: 200px;
+	width: 200px;
+	padding-top: 75px;
+	font-size: 30px;
+	padding-right: 10px;
+	text-align: center;
+
+}

@@ -1,0 +1,34 @@
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Source Sans Pro";
+    background-image: url(http://orig03.deviantart.net/812c/f/2015/158/2/f/2fb87dc97d9c8a3662e5a5643ee036fd-d8wene0.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    color: ghostwhite;
+    
+}
+
+h1, h2 {
+	font-family: 'Press Start 2P';
+	text-align: center;
+	margin-top: 100px;
+}
+
+#start {
+	margin-top: 120px;
+	text-align: center;
+
+
+}
+
+ a{
+    
+   color: transparent;
+ }
