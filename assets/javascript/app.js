@@ -12,32 +12,39 @@
       endSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_lose.wav");
 
     
-    var getinputValue = function($input) {
-    var label = $input.text(); 
-    $input.text('');
-    var inputValue = $input.val();
-    $input.text(label);
-    return inputValue;
+    
+
+    $("#radio").click(function() {
+      correctAnswer();
 }
     $("#sumbit-answers").click(function() {
       submitAnswers();
 
     });
 
+    var getinputValue = function($input) {
+    var label = $input.text(); 
+    $input.text('');
+    var inputValue = $input.val();
+    $input.text(label);
+    return inputValue;
+
   function submitAnswers() {
      console.log("submitAnswers WORKS!!", correctAnswer);
-     console.log($("q1"));
+    
   }    
 
+   var $array = [];
+  $('input').each(function(){
+      var id = $(this).attr('id');
+      $array.push(id);
+      console.log($array);
+      console.log(id);
+  });
 
- var $array = [];
-$('input').each(function(){
-    var id = $(this).attr('id');
-    $array.push(id);
-    console.log($array);
-    console.log(id);
-});
 
+
+//COUNTER
    var number = 30;
         
             
