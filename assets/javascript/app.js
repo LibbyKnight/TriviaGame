@@ -13,21 +13,25 @@
 
     
     
-
+      //radio click function
     $("#radio").click(function() {
       correctAnswer();
-}
+  });
+
+    //submit button function
     $("#sumbit-answers").click(function() {
       submitAnswers();
 
     });
 
+    //getting value from click
     var getinputValue = function($input) {
     var label = $input.text(); 
     $input.text('');
     var inputValue = $input.val();
     $input.text(label);
     return inputValue;
+
 
   function submitAnswers() {
      console.log("submitAnswers WORKS!!", correctAnswer);
@@ -75,7 +79,7 @@
      
         run();
     
-
+  }
 });
 
 
