@@ -1,50 +1,50 @@
  $(document).ready(function() {
 
-    // var answers = ["Namco"]
-
-    var correctAnswer = "";
-    console.log (correctAnswer);
-
+    var answers = [".1b", ".2c", ".3d", ".4a", ".5b", ".6d", ".7b", ".8c", ".9a", ".10b"];
     var winSound = document.createElement("audio");
       winSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_win.wav");
-
     var endSound = document.createElement("audio");
       endSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_lose.wav");
-
+      var setupGame = true;
     
-    
-      //radio click function
-    $("#radio").click(function() {
-      correctAnswer();
-  });
 
-    //submit button function
-    $("#sumbit-answers").click(function() {
+
+    // function setupGame(setupGame) {
+
+
+    // }
+    
+
+    function winGame () {
+
+       $("#radio").click(function() {
+      submitAnswers();
+      console.log(submitAnswers);
+
+      $("#sumbit-answers").click(function() {
       submitAnswers();
 
-    });
-
-    //getting value from click
-    var getinputValue = function($input) {
-    var label = $input.text(); 
-    $input.text('');
-    var inputValue = $input.val();
-    $input.text(label);
-    return inputValue;
-
-
-  function submitAnswers() {
-     console.log("submitAnswers WORKS!!", correctAnswer);
     
-  }    
 
-   var $array = [];
-  $('input').each(function(){
-      var id = $(this).attr('id');
-      $array.push(id);
-      console.log($array);
-      console.log(id);
+      if (submitAnswers === answers) {
+
+
+                winSound.play(); 
+                stop();
+                $(location).attr('href', 'index3.html');
+
+               }
+              else {
+
+                endSound.play(); 
+                stop();
+                $(location).attr('href', 'index4.html')
+                }
+
+      });
   });
+
+}
 
 
 
@@ -55,7 +55,7 @@
         function run(){
             counter = setInterval(decrement, 1000);
         }
-    
+
         function decrement(){
            
             number--;
@@ -67,9 +67,12 @@
                 endSound.play(); 
                 stop();
                 alert('Times Up!');
-                $(location).attr('href', 'index4.html')
-
-            }
+                $(location).attr('href', 'index4.html');
+                setTimeout(function() {
+                window.location.href = "index.html;"
+                }, 2000);
+    
+         }  
         }
  
         function stop(){
@@ -78,9 +81,9 @@
         }
      
         run();
-    
-  }
-});
+    });
+  
+
 
 
 
