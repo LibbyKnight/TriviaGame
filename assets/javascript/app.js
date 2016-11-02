@@ -16,34 +16,32 @@
     
     
 function checkTest()  {
-$('#submitAnswers').click(function() {
+
+    $('#submitAnswers').click(function() {
     $(this).closest('question')
-        .find('[name="answers"]')
-            .removeClass('checked')
-        .filter(':checked')
-            .addClass('checked');
+    .find('input[type=radio]')
+    .removeClass('checked')
+    .filter(':checked')
+    .addClass('checked');
     return false;
 
   });
 
-  
-        if(answers.indexOf("#radio") < 0) {
+      if(answers.indexOf("#radio") < 0) {
 
-                console.log('#radio');
-                console.log (answers);
-                winSound.play(); 
-                stop();
-                $(location).attr('href', 'index3.html');
+        console.log('#radio');
+        console.log (answers);
+        winSound.play(); 
+        stop();
+        $(location).attr('href', 'index3.html');
 
-               }
-              else {
+   }
+      else {
 
-                endSound.play(); 
-                stop();
-                $(location).attr('href', 'index4.html')
-                }
-
-     
+        endSound.play(); 
+        stop();
+        $(location).attr('href', 'index4.html')
+    }
   }
 
 
@@ -70,8 +68,7 @@ $('#submitAnswers').click(function() {
                 setTimeout(function() {
                 window.location.href = "index.html;"
                 }, 2000);
-    
-         }  
+           }  
         }
  
         function stop(){
