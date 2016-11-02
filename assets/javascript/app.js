@@ -5,7 +5,7 @@
       winSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_win.wav");
     var endSound = document.createElement("audio");
       endSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_lose.wav");
-      var setupGame = true;
+    // var setupGame = true;
     
 
 
@@ -14,21 +14,23 @@
 
     // }
     
-
-    function winGame () {
-
-       $("#radio").click(function() {
-      submitAnswers();
-      console.log(submitAnswers);
-
-      $("#sumbit-answers").click(function() {
-      submitAnswers();
-
     
+function checkTest()  {
+$('#submitAnswers').click(function() {
+    $(this).closest('question')
+        .find('[name="answers"]')
+            .removeClass('checked')
+        .filter(':checked')
+            .addClass('checked');
+    return false;
 
-      if (submitAnswers === answers) {
+  });
 
+  
+        if(answers.indexOf("#radio") < 0) {
 
+                console.log('#radio');
+                console.log (answers);
                 winSound.play(); 
                 stop();
                 $(location).attr('href', 'index3.html');
@@ -41,11 +43,8 @@
                 $(location).attr('href', 'index4.html')
                 }
 
-      });
-  });
-
-}
-
+     
+  }
 
 
 //COUNTER
