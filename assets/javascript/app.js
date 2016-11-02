@@ -1,10 +1,11 @@
  $(document).ready(function() {
 
-    var answers = [".1b", ".2c", ".3d", ".4a", ".5b", ".6d", ".7b", ".8c", ".9a", ".10b"];
+    var answers = ["#1b", "#2c", "#3d", "#4a", "#5b", "#6d", "#7b", "#8c", "#9a", "#10b"];
     var winSound = document.createElement("audio");
       winSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_win.wav");
     var endSound = document.createElement("audio");
       endSound.setAttribute("src", "http://themushroomkingdom.net/sounds/wav/smb2/smb2_bonus_chance_lose.wav");
+    var correctAnswers = 0;
     // var setupGame = true;
     
 
@@ -14,42 +15,41 @@
 
     // }
     
+    $('.submit').click(function() {
+      var test = ($("input[name=answers[1]]");
+      console.log(test);
+     
+     
+    });
+
+// function checkTest(answer)  {
+
+
+//     if (answer == answers) {
+
     
-function checkTest()  {
+//         console.log('#radio');
+//         console.log(triviaForm);
+//         console.log(answers);
+//         winSound.play(); 
+//         stop();
+//         $(location).attr('href', 'index3.html');
 
-    $('#submitAnswers').click(function() {
-    $(this).closest('question')
-    .find('input[type=radio]')
-    .removeClass('checked')
-    .filter(':checked')
-    .addClass('checked');
-    return false;
+//    }
+//       else {
 
-  });
-
-      if(answers.indexOf("#radio") < 0) {
-
-        console.log('#radio');
-        console.log (answers);
-        winSound.play(); 
-        stop();
-        $(location).attr('href', 'index3.html');
-
-   }
-      else {
-
-        endSound.play(); 
-        stop();
-        $(location).attr('href', 'index4.html')
-    }
-  }
+//         endSound.play(); 
+//         stop();
+//         $(location).attr('href', 'index4.html')
+//     }
+//   }
 
 
-//COUNTER
+// //COUNTER
    var number = 30;
         
             
-        function run(){
+        function run() {
             counter = setInterval(decrement, 1000);
         }
 
